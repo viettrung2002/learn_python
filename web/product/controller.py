@@ -18,6 +18,6 @@ def get_all_product():
 def update_product(id):
     return update_product_service(id)
 
-@products.route("/product/delete/<int:id>", methods = ["GET"])
+@products.route("/product/delete/<int:id>", methods = ["DELETE"])
 def delete_product(id):
     return delete_product_services(id)

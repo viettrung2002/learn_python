@@ -37,4 +37,4 @@ def login_services():
     if not user:
         return jsonify({"error": "Invalid username or password"}), 401
     
-    return user_schema.jsonify(user)
+    return user_schema.jsonify(user) 

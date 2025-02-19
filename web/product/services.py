@@ -14,15 +14,11 @@ def add_product_service ():
     image = request.json['image']
     price = request.json['price']
     category_id = request.json['category_id']
-    
+    print("Received data:", request.get_json()) 
     try:
-        print(name)
+        
         new_product = Product(name, brand, description, image,price, category_id)
-        print(brand)
         db.session.add(new_product)
-        print(new_product)
-        print(price)
-        print(category_id)
         db.session.commit()
         
         return jsonify({"message": "Product added successfully!", "product": name}), 201
@@ -49,6 +45,7 @@ def get_all_product_service():
 def update_product_service(id):
     product = Product.query.get(id)
     data = request.json
+    print("Received data:", request.get_json()) 
     if product:
         try: 
             product.name = data.get("name", product.name)
