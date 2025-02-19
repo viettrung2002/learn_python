@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "MySQL",
+            "name": "MySQL",
+            "database": "web",
+            "username": "root",
+            "connectString": "mysql+pymysql://root:123456@localhost:3306/web"
+        }
+    ]
+}
